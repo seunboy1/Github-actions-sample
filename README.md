@@ -1,2 +1,3 @@
 # Github-actions-sample
-Simple project on creating a CI/CD pipeline using GitHub actions.
+This is a simple project that uses github actions to create a CI/CD pipeline. 
+
