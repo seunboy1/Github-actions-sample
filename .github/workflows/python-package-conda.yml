@@ -10,8 +10,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    # unshallow git clone
     - run: |
-#     unshallow git clone
         git fetch --prune --unshallow
         
     - name: Set up Python 3.8
