@@ -34,11 +34,16 @@ jobs:
         export PYTHONPATH=src
         conda install pytest
         pytest test/test.py
-    - name: Test with pytest second
+    - name: Deploy to Heroku first
       run: |
         export PYTHONPATH=src
         conda install pytest
         pytest test/test.py
+        
+      if: github.ref == 'refs/heads/master' && job.status == 'success'
+      env:
+        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
     - name: Deploy to Heroku
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
