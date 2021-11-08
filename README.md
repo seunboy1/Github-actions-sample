@@ -1,5 +1,5 @@
 # Github-actions-sample
-This is a simple project that uses github actions to create a CI/CD pipeline. 
+This is a simple project that uses github actions to create a CI/CD pipeline. The 
 
-It contains a simple flask application thats is deployed on heroku using github actions.
+It contains dependency installation stage, unitesting stage and then deployment of a simple flask application to heroku. All of which is done with the help of github actions.
 
